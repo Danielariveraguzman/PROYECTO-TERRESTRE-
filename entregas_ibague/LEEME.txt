@@ -1,0 +1,10 @@
+1) Cierra cualquier ventana de python que haya quedado abierta de versiones anteriores.
+2) pip install -r requirements.txt
+3) python app.py   ->   abre http://127.0.0.1:5050
+La primera vez descarga las calles de Ibagué (varios minutos) y las guarda en ibague_grafo_v4.pkl.
+Si la bodega no queda donde quieres, cambia BODEGA en datos.py.
+La capacidad de cada vehículo (peso en kg y volumen en m3) está en VEHICULOS (datos.py).
+Las cajas tienen alto, ancho y profundidad (cm); la mochila respeta peso y volumen.
+No se usa tráfico: el tiempo de cada tramo es distancia / velocidad de la vía.
+El mapa se guarda en ibague_grafo_v4.pkl. Si no está en esta carpeta, el programa lo busca en carpetas vecinas (versiones anteriores) y lo copia.
+Si hay que descargarlo, prueba varios servidores de OpenStreetMap; si ninguno responde, avisa y no se queda colgado.

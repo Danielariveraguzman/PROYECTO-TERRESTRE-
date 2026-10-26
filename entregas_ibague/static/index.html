@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entregas en Ibagué v4</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <aside>
+    <h1>Entregas en Ibagué <small>v4</small></h1>
+    <h2>Pedido</h2>
+    <div class="fila">
+      <label>Vehículo
+        <select id="vehiculo">
+          <option value="moto">Moto</option><option value="van" selected>Van</option><option value="furgon">Furgón</option>
+        </select>
+      </label>
+      <label>Peso del paquete (kg) <input id="peso" type="number" min="0.1" step="0.1" value="10"></label>
+    </div>
+    <div class="fila tres">
+      <label>Alto (cm) <input id="alto" type="number" min="1" value="30"></label>
+      <label>Ancho (cm) <input id="ancho" type="number" min="1" value="30"></label>
+      <label>Profundidad (cm) <input id="prof" type="number" min="1" value="30"></label>
+    </div>
+    <div class="fila">
+      <label>Tarifa (COP) <input id="valor" type="number" min="1" value="20000"></label>
+      <label>Nombre del paquete <input id="nombre" placeholder="Ej: Laptop Ana"></label>
+    </div>
+    <p id="aviso"></p>
+    <small>Haz clic en el mapa para elegir el destino.</small>
+
+    <h2>Rutas desde la bodega</h2>
+    <p id="fuente"></p>
+    <div id="rutas"><small>Aún no hay destino.</small></div>
+    <button id="guardar" type="button">Guardar pedido</button>
+
+    <h2>Pedidos guardados</h2>
+    <ul id="lista"></ul>
+    <div class="fila">
+      <label>Peso máx. del vehículo (kg) <input id="pesoMax" type="number" min="1"></label>
+      <label>Volumen máx. (m³) <input id="volMax" type="number" min="0.01" step="0.01"></label>
+    </div>
+    <button id="despachar" type="button">Armar carga y despachar</button>
+    <div id="resultado"></div>
+  </aside>
+  <div id="mapa"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="/static/js/mapa.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
